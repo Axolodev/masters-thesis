@@ -1,0 +1,27 @@
+{
+  "workbench.colorTheme": "GitHub Dark Default",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex, makeglossaries, pdflatex (2x)",
+      "tools": ["pdflatex", "makeglossaries", "pdflatex", "pdflatex"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-output-directory=%DIR%/out",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "makeglossaries",
+      "command": "makeglossaries",
+      "args": ["-d%DIR%/out", "%DOCFILE%"]
+    }
+  ]
+}
