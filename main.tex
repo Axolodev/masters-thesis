@@ -3,6 +3,7 @@
 
 \usepackage{graphicx, float, hyperref, enumerate, helvet, tabto}
 \usepackage[utf8]{inputenc}
+\usepackage{blindtext}
 
 \usepackage[acronym, nopostdot, nonumberlist]{glossaries}
 \makeglossaries
@@ -12,6 +13,12 @@
 \usepackage[yyyymmdd]{datetime}
 
 \graphicspath{ {assets/} }
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
 
 % 1.5 line spacing
 \renewcommand{\baselinestretch}{1.5}
@@ -32,13 +39,14 @@
 
 
 \begin{document}
-
 \input{content/cover.tex}
 \clearpage
 
+\pagenumbering{Roman}
 \input{content/tables_of_content.tex}
 \clearpage
 
-This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+\pagenumbering{arabic}
+This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}.\blindtext[1]
 
 \end{document}
