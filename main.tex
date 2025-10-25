@@ -1,9 +1,11 @@
 \documentclass[11pt, letterpaper]{article}
 % Font: Arial, 11-point size
 
-\usepackage{graphicx, float, hyperref, adjustbox, enumerate, helvet, tabto, tabularx, blindtext, setspace, titling}
+\usepackage{graphicx, float, adjustbox, enumerate, helvet, tabto, tabularx, blindtext, setspace, titling}
 \usepackage[utf8]{inputenc}
-
+\usepackage{xcolor,soul,lipsum}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\anchor}[2]{\href{#1}{\color{blue}\setulcolor{blue}\ul{#2}}}
 
 \usepackage[acronym, nopostdot, nonumberlist]{glossaries}
 \makeglossaries
