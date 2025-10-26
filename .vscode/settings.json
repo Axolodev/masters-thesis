@@ -28,5 +28,6 @@
       "command": "makeglossaries",
       "args": ["-d%DIR%/out", "%DOCFILE%"]
     }
-  ]
+  ],
+  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])"
 }
