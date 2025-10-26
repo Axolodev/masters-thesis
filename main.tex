@@ -6,6 +6,13 @@
 \usepackage{xcolor,soul,lipsum}
 \usepackage[hidelinks]{hyperref}
 \newcommand{\anchor}[2]{\href{#1}{\color{blue}\setulcolor{blue}\ul{#2}}}
+\usepackage[
+  backend=biber,
+  % We want to use APA style for citations and references
+  style=apa,
+  sorting=ynt
+]{biblatex}
+\addbibresource{sources/references.bib}
 
 \usepackage[acronym, nopostdot, nonumberlist]{glossaries}
 \makeglossaries
@@ -57,6 +64,9 @@ This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}.
 
 \chapter{Conclusion}
 \blindtext[1]
+
+\clearpage
+\printbibliography[title={\fontsize{14}{21}\selectfont\textbf{References}}]
 
 \clearpage
 \input{content/appendix.tex}

@@ -2,8 +2,8 @@
   "workbench.colorTheme": "GitHub Dark Default",
   "latex-workshop.latex.recipes": [
     {
-      "name": "pdflatex, makeglossaries, pdflatex (2x)",
-      "tools": ["pdflatex", "makeglossaries", "pdflatex", "pdflatex"]
+      "name": "pdflatex, biber, makeglossaries, pdflatex (2x)",
+      "tools": ["pdflatex", "biber", "makeglossaries", "pdflatex", "pdflatex"]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -17,6 +17,11 @@
         "-file-line-error",
         "%DOC%"
       ]
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": ["--output-directory=%DIR%/out", "%DOCFILE%"]
     },
     {
       "name": "makeglossaries",
