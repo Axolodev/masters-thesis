@@ -7,24 +7,24 @@
 \titlespacing*{\chapter}{0pt}{-30pt}{20pt}
 
 \renewcommand*{\contentsname}{\fontsize{14}{21}\selectfont\textbf{Table of contents}}
-\addcontentsline{toc}{chapter}{Table of contents}
+\addelementtoindex{chapter}{Table of contents}
 \tableofcontents
 
 \clearpage
 
-\addcontentsline{toc}{chapter}{Table directory}
+\addelementtoindex{chapter}{Table directory}
 \renewcommand*{\listtablename}{\fontsize{14}{21}\selectfont\textbf{Table directory}}
 \listoftables
 
 \clearpage
 
-\addcontentsline{toc}{chapter}{Table of figures}
+\addelementtoindex{chapter}{Table of figures}
 \renewcommand*{\listfigurename}{\fontsize{14}{21}\selectfont\textbf{Table of figures}}
 \listoffigures
 
 \clearpage
 
-\addcontentsline{toc}{chapter}{List of abbreviations}
+\addelementtoindex{chapter}{List of abbreviations}
 {
   \def\baselinestretch{1}\selectfont
   \printglossary[type=\acronymtype, title={{\fontsize{14}{21}\selectfont\textbf{List of abbreviations\vspace{1em}}} }]
