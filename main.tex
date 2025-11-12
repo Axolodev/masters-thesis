@@ -1,7 +1,7 @@
 \documentclass[11pt, a4paper]{report}
 % Font: Arial, 11-point size
 
-\usepackage{graphicx, float, tocloft, titlesec, adjustbox, enumerate, helvet, tabto, tabularx, blindtext, setspace, titling}
+\usepackage{graphicx, caption, float, tocloft, titlesec, adjustbox, enumerate, helvet, tabto, tabularx, blindtext, setspace, titling, subcaption}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor,soul,lipsum}
 \usepackage[hidelinks]{hyperref}
@@ -12,12 +12,58 @@
   style=apa,
   sorting=ynt
 ]{biblatex}
+
 \addbibresource{sources/references.bib}
 
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
 
 \newcommand{\addelementtoindex}[2]{
   \phantomsection
   \addcontentsline{toc}{#1}{#2}
+}
+
+\DeclareCaptionLabelFormat{custom}
+{%
+    #1 #2
+}
+% Separator style
+\DeclareCaptionLabelSeparator{custom}{--}
+% Caption format    
+\DeclareCaptionFormat{custom}
+{%
+    \raggedright\textbf{#1#2 #3}
+}
+\captionsetup
+{
+    format=custom,
+    labelformat=custom,
+    labelsep=custom,
+}
+
+\newcommand{\addfigure}[4]{
+  \begingroup
+  \begin{figure}[!ht]
+    \caption{#1}
+    \includegraphics[width=\textwidth]{#2}
+    \label{#4}
+    \def\baselinestretch{1.5}\selectfont
+    \noindent\small\textbf{Source: #3}\par
+  \end{figure}
+  \endgroup
+}
+
+\newcommand{\addtable}[4]{
+  \begingroup
+  \begin{table}[!ht]
+    \caption{#1}
+    #2
+    \label{#4}
+  \end{table}
+  \vspace{-1em}
+  \noindent\small\textbf{Source: #3}\par
+  \vspace{1em}
+  \endgroup
 }
 
 \usepackage[acronym, nopostdot, nonumberlist]{glossaries}
@@ -63,7 +109,24 @@ This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}.
 \titlespacing*{\subsection}{0pt}{0pt}{1em}
 
 \chapter{Introduction}
+\blindtext[1]\par
+
+\addfigure{Example XY}{assets/Picture1.jpg}{\blindtext[1]}{fig:sample_figure}
+
+\blindtext[1]\par
+
+\addtable{Plan results of XY GmbH}{%
+  \begin{tabular}{|l|l|}
+    \hline
+    What & is     \\
+    \hline
+    this & doing? \\
+    \hline
+  \end{tabular}
+}{\blindtext[1]}{tbl:nicetablelesstable2}
 \blindtext[1]
+
+
 \clearpage
 
 \input{content/body.tex}

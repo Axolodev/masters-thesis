@@ -14,13 +14,25 @@
 
 \addelementtoindex{chapter}{Table directory}
 \renewcommand*{\listtablename}{\fontsize{14}{21}\selectfont\textbf{Table directory}}
-\listoftables
+{
+  \renewcommand\cfttabindent{0pt}
+  \renewcommand\cfttabpresnum{Table~}
+  \settowidth{\cfttabnumwidth}{\cfttabpresnum}
+  \renewcommand{\cfttabaftersnumb}{\quad--~ }
+  \listoftables
+}
 
 \clearpage
 
 \addelementtoindex{chapter}{Table of figures}
 \renewcommand*{\listfigurename}{\fontsize{14}{21}\selectfont\textbf{Table of figures}}
-\listoffigures
+{
+  \renewcommand\cftfigindent{0pt}
+  \renewcommand\cftfigpresnum{Figure~}
+  \settowidth{\cftfignumwidth}{\cftfigpresnum}
+  \renewcommand{\cftfigaftersnumb}{\quad--~ }
+  \listoffigures
+}
 
 \clearpage
 
