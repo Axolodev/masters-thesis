@@ -6,6 +6,8 @@
 \usepackage{xcolor,soul,lipsum}
 \usepackage[hidelinks]{hyperref}
 \newcommand{\anchor}[2]{\href{#1}{\color{blue}\setulcolor{blue}\ul{#2}}}
+
+
 \usepackage[
   backend=biber,
   % We want to use APA style for citations and references
@@ -14,6 +16,7 @@
 ]{biblatex}
 
 \addbibresource{sources/references.bib}
+\addbibresource{sources/smes_economical_impact.bib}
 
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
@@ -57,6 +60,10 @@
   \textcolor{red}{\sethlcolor{yellow}\hl{CITE NEEDED}}
 }
 
+\newcommand{\doHighlight}[1]{
+  \textcolor{blue}{\sethlcolor{yellow}\hl{#1}}
+}
+
 \newcommand{\addtable}[4]{
   \begingroup
   \begin{table}[!ht]
@@ -69,6 +76,8 @@
   \vspace{1em}
   \endgroup
 }
+
+
 
 \usepackage[acronym, nopostdot, nonumberlist]{glossaries}
 \makeglossaries
@@ -113,11 +122,11 @@ This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}.
 \titlespacing*{\subsection}{0pt}{0pt}{1em}
 
 \chapter{Introduction}
-\blindtext[1]\par
+\input{content/chapters/introduction.tex}
 
-\addfigure{Example XY}{assets/Picture1.jpg}{\blindtext[1]}{fig:sample_figure}
+\addfigure{Example XY}{assets/Picture1.jpg}{caption for the image}{fig:sample_figure}
 
-\blindtext[1]\par
+a bit of text\par
 
 \addtable{Plan results of XY GmbH}{%
   \begin{tabular}{|l|l|}
@@ -127,16 +136,18 @@ This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}.
     this & doing? \\
     \hline
   \end{tabular}
-}{\blindtext[1]}{tbl:nicetablelesstable2}
-\blindtext[1]
+}{caption for the table}{tbl:nicetablelesstable2}
+text below the table
 
 
 \clearpage
 
+\input{content/dump.tex}
+
 \input{content/body.tex}
 
 \chapter{Conclusion}
-\blindtext[1]
+conclusions go here
 
 \clearpage
 \addelementtoindex{chapter}{References}
