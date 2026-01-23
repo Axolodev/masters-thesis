@@ -1,4 +1,4 @@
 modifyLineBreaks:
   textWrapOptions:
-    columns: 3
+    columns: 80
     huge: wrap

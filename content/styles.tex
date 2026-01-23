@@ -25,13 +25,13 @@
 \renewcommand{\cftchapaftersnum}{}
 \let\oldcontentsline\contentsline
 \renewcommand{\contentsline}[4]{%
-  \ifnum\pdfstrcmp{#1}{chapter}=0
-    \oldcontentsline{#1}{\MakeUppercase{#2}}{#3}{#4}%
-  \else\ifnum\pdfstrcmp{#1}{section}=0
-      \oldcontentsline{#1}{\MakeUppercase{#2}}{#3}{#4}%
-    \else
-      \oldcontentsline{#1}{#2}{#3}{#4}%
-    \fi\fi
+	\ifnum\pdfstrcmp{#1}{chapter}=0
+		\oldcontentsline{#1}{\MakeUppercase{#2}}{#3}{#4}%
+	\else\ifnum\pdfstrcmp{#1}{section}=0
+			\oldcontentsline{#1}{\MakeUppercase{#2}}{#3}{#4}%
+		\else
+			\oldcontentsline{#1}{#2}{#3}{#4}%
+		\fi\fi
 }
 
 % Optional: adjust indentation
@@ -41,7 +41,6 @@
 % Optional: add dots for chapters
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftdotsep}{2}
-
 
 % Add period after chapter, section, and subsection numbers
 \renewcommand{\cftchapaftersnum}{.}
@@ -59,10 +58,10 @@
 
 % Make plain pages (chapter pages) use the same footer as fancy
 \fancypagestyle{plain}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{0pt}
-  \renewcommand{\footrulewidth}{0pt}
-  \fancyfoot[R]{\thepage}
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\fancyfoot[R]{\thepage}
 }
 
 % 1.5 line spacing
@@ -77,7 +76,6 @@
 
 % Others
 \renewcommand{\dateseparator}{--}
-
 
 \makeatletter
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}

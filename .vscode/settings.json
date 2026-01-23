@@ -1,5 +1,16 @@
 {
   "workbench.colorTheme": "GitHub Dark Default",
+  "[latex]": {
+    "editor.formatOnSave": false
+  },
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.tex$",
+        "cmd": "latexindent -l=${workspaceFolder}/formatter.yaml -m -s -w ${file}"
+      }
+    ]
+  },
   "latex-workshop.latex.recipes": [
     {
       "name": "pdflatex, biber, makeglossaries, pdflatex (2x)",
@@ -29,12 +40,5 @@
       "args": ["-d%DIR%/out", "%DOCFILE%"]
     }
   ],
-  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])",
-  "latex-workshop.formatting.latexindent.args": [
-    "-c",
-    "%DIR%/",
-    "%TMPFILE%",
-    "-y=defaultIndent: '%INDENT%'",
-    "-l=%DIR%/formatter.yaml"
-  ]
+  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])"
 }
