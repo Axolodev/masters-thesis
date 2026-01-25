@@ -7,7 +7,7 @@
     "commands": [
       {
         "match": "\\.tex$",
-        "cmd": "latexindent -l=${workspaceFolder}/formatter.yaml -m -s -w ${file}"
+        "cmd": "tex-fmt ${file}"
       }
     ]
   },

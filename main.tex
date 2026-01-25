@@ -1,12 +1,12 @@
 \documentclass[11pt, a4paper]{report}
 % Font: Arial, 11-point size
 
-\usepackage{graphicx, caption, float, tocloft, titlesec, adjustbox, enumerate, helvet, tabto, tabularx, blindtext, setspace, titling, subcaption}
+\usepackage{graphicx, caption, float, tocloft, titlesec, adjustbox,
+enumerate, helvet, tabto, tabularx, blindtext, setspace, titling, subcaption}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor,soul,lipsum}
 \usepackage[hidelinks]{hyperref}
 \newcommand{\anchor}[2]{\href{#1}{\color{blue}\setulcolor{blue}\ul{#2}}}
-
 
 \usepackage[
   backend=biber,
@@ -28,20 +28,20 @@
 
 \DeclareCaptionLabelFormat{custom}
 {%
-    #1 #2
+  #1 #2
 }
 % Separator style
 \DeclareCaptionLabelSeparator{custom}{--}
-% Caption format    
+% Caption format
 \DeclareCaptionFormat{custom}
 {%
-    \raggedright\textbf{#1#2 #3}
+  \raggedright\textbf{#1#2 #3}
 }
 \captionsetup
 {
-    format=custom,
-    labelformat=custom,
-    labelsep=custom,
+  format=custom,
+  labelformat=custom,
+  labelsep=custom,
 }
 
 \newcommand{\addfigure}[4]{
@@ -76,8 +76,6 @@
   \vspace{1em}
   \endgroup
 }
-
-
 
 \usepackage[acronym, nopostdot, nonumberlist]{glossaries}
 \makeglossaries
@@ -124,18 +122,19 @@ This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}.
 \chapter{Introduction}
 \input{content/chapters/introduction.tex}
 
-\addfigure{Example XY}{assets/Picture1.jpg}{caption for the image}{fig:sample_figure}
+\addfigure{Example XY}{assets/Picture1.jpg}{caption for the
+image}{fig:sample_figure}
 
 a bit of text\par
 
 \addtable{Plan results of XY GmbH}{%
-	\begin{tabular}{|l|l|}
-		\hline
-		What & is     \\
-		\hline
-		this & doing? \\
-		\hline
-	\end{tabular}
+  \begin{tabular}{|l|l|}
+    \hline
+    What & is     \\
+    \hline
+    this & doing? \\
+    \hline
+  \end{tabular}
 }{caption for the table}{tbl:nicetablelesstable2}
 text below the table
 
