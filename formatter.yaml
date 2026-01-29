@@ -1,7 +1,0 @@
-modifyLineBreaks:
-  textWrapOptions:
-    columns: 80
-    huge: wrap
-    tabstop: 0
-    perCodeBlockBasis: 0
-    all: 1

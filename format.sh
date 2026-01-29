@@ -1,6 +1,6 @@
 #!/bin/bash
 # Format all LaTeX files with lines under 80 characters
 
-find . -name "*.tex" -exec tex-fmt {} \;
+tex-fmt --recursive -q;
 
-echo "✓ All .tex files formatted"
+echo "✓ All .tex and .bib files formatted"

@@ -6,40 +6,45 @@
 {}
 \titlespacing*{\chapter}{0pt}{-30pt}{20pt}
 
-\renewcommand*{\contentsname}{\fontsize{14}{21}\selectfont\textbf{Table of contents}}
+\renewcommand*{\contentsname}{\fontsize{14}{21}\selectfont\textbf{Table
+of contents}}
 \addelementtoindex{chapter}{Table of contents}
 \tableofcontents
 
 \clearpage
 
 \addelementtoindex{chapter}{Table directory}
-\renewcommand*{\listtablename}{\fontsize{14}{21}\selectfont\textbf{Table directory}}
+\renewcommand*{\listtablename}{\fontsize{14}{21}\selectfont\textbf{Table
+directory}}
 {
-	\renewcommand\cfttabindent{0pt}
-	\renewcommand\cfttabpresnum{Table~}
-	\settowidth{\cfttabnumwidth}{\cfttabpresnum}
-	\renewcommand{\cfttabaftersnumb}{\quad--~ }
-	\listoftables
+  \renewcommand\cfttabindent{0pt}
+  \renewcommand\cfttabpresnum{Table~}
+  \settowidth{\cfttabnumwidth}{\cfttabpresnum}
+  \renewcommand{\cfttabaftersnumb}{\quad--~ }
+  \listoftables
 }
 
 \clearpage
 
 \addelementtoindex{chapter}{Table of figures}
-\renewcommand*{\listfigurename}{\fontsize{14}{21}\selectfont\textbf{Table of figures}}
+\renewcommand*{\listfigurename}{\fontsize{14}{21}\selectfont\textbf{Table
+of figures}}
 {
-	\renewcommand\cftfigindent{0pt}
-	\renewcommand\cftfigpresnum{Figure~}
-	\settowidth{\cftfignumwidth}{\cftfigpresnum}
-	\renewcommand{\cftfigaftersnumb}{\quad--~ }
-	\listoffigures
+  \renewcommand\cftfigindent{0pt}
+  \renewcommand\cftfigpresnum{Figure~}
+  \settowidth{\cftfignumwidth}{\cftfigpresnum}
+  \renewcommand{\cftfigaftersnumb}{\quad--~ }
+  \listoffigures
 }
 
 \clearpage
 
 \addelementtoindex{chapter}{List of abbreviations}
 {
-	\def\baselinestretch{1}\selectfont
-	\printglossary[type=\acronymtype, title={{\fontsize{14}{21}\selectfont\textbf{List of abbreviations\vspace{1em}}} }]
+  \def\baselinestretch{1}\selectfont
+  \printglossary[type=\acronymtype,
+    title={{\fontsize{14}{21}\selectfont\textbf{List of
+  abbreviations\vspace{1em}}} }]
 }
 
 \clearpage
@@ -51,4 +56,3 @@
 {20pt}
 {\Huge}
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
-

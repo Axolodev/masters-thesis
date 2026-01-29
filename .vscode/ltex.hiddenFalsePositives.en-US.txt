@@ -1,0 +1,2 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe Framework: What is DigComp 3.0?\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qchapter Executive Summary 14 21Executive Summary\\E$"}
