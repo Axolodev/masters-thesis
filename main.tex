@@ -2,10 +2,12 @@
 % Font: Arial, 11-point size
 
 \usepackage{graphicx, caption, float, tocloft, titlesec, adjustbox,
-enumerate, helvet, tabto, tabularx, blindtext, setspace, titling, subcaption}
+  enumerate, helvet, tabto, tabularx, blindtext, setspace, titling,
+subcaption}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor,soul,lipsum}
 \usepackage[hidelinks]{hyperref}
+\usepackage[outputDir=out]{markdown}
 \newcommand{\anchor}[2]{\href{#1}{\color{blue}\setulcolor{blue}\ul{#2}}}
 
 \usepackage[
@@ -117,27 +119,6 @@ This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}.
 {\normalfont\fontsize{11}{16.5}\selectfont\bfseries}
 {\thesubsection.}{1.8cm}{}
 \titlespacing*{\subsection}{0pt}{0pt}{1em}
-
-\chapter{Introduction}
-\input{content/chapters/introduction.tex}
-
-\addfigure{Example XY}{assets/Picture1.jpg}{caption for the
-image}{fig:sample_figure}
-
-a bit of text\par
-
-\addtable{Plan results of XY GmbH}{%
-  \begin{tabular}{|l|l|}
-    \hline
-    What & is     \\
-    \hline
-    this & doing? \\
-    \hline
-  \end{tabular}
-}{caption for the table}{tbl:nicetablelesstable2}
-text below the table
-
-\clearpage
 
 \input{content/dump.tex}
 

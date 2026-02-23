@@ -22,6 +22,7 @@
       "name": "pdflatex",
       "command": "pdflatex",
       "args": [
+        "-shell-escape",
         "-output-directory=%DIR%/out",
         "-synctex=1",
         "-interaction=nonstopmode",
@@ -32,7 +33,11 @@
     {
       "name": "biber",
       "command": "biber",
-      "args": ["--output-directory=%DIR%/out", "%DOCFILE%"]
+      "args": [
+        "--input-directory=%DIR%/out",
+        "--output-directory=%DIR%/out",
+        "%DOCFILE%"
+      ]
     },
     {
       "name": "makeglossaries",

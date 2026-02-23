@@ -50,3 +50,6 @@ build/
 
 *.bak*
 *.synctex
+*.md.tex
+*.in
+*.lua
