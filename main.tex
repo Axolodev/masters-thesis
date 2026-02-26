@@ -14,7 +14,8 @@ subcaption}
   backend=biber,
   % We want to use APA style for citations and references
   style=apa,
-  sorting=ynt
+  % Sorting: Name of author, year, title.
+  sorting=nyt
 ]{biblatex}
 
 \input{sources/references.tex}
@@ -101,9 +102,6 @@ subcaption}
 \input{content/tables_of_content.tex}
 \clearpage
 
-\pagenumbering{arabic}
-This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}.
-
 % Chapter formatting: inline number with title
 \titleformat{\chapter}[hang]
 {\normalfont\fontsize{14}{21}\selectfont\bfseries}
@@ -121,11 +119,9 @@ This is a test for an acronym \acrfull{hci} and if I use \acrshort{dsr}.
 \titlespacing*{\subsection}{0pt}{0pt}{1em}
 
 \input{content/dump.tex}
+\pagenumbering{arabic}
 
 \input{content/body.tex}
-
-\chapter{Conclusion}
-conclusions go here
 
 \clearpage
 \addelementtoindex{chapter}{References}

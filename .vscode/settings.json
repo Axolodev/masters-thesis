@@ -45,5 +45,8 @@
       "args": ["-d%DIR%/out", "%DOCFILE%"]
     }
   ],
-  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])"
+  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])",
+  "terminal.integrated.suggest.suggestOnTriggerCharacters": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.quickSuggestionsDelay": 2000
 }
